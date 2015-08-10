@@ -1,0 +1,14 @@
+@(userForm: Form[User])
+@import b3.vertical.fieldConstructor
+@main("User Sign Up") {
+    <h1>User Sign Up</h1>
+    @b3.form(routes.SignUpController.save()) {
+        <fieldset>
+            @b3.text(userForm("user"), '_label -> "Username", 'placeholder -> "johndoe")
+            @b3.email( userForm("email"), '_label -> "Email", 'placeholder -> "example@mail.com" )
+            @b3.password( userForm("pword"), '_label -> "Password", 'placeholder -> "Password" )
+        </fieldset>
+        @b3.submit('class -> "btn btn-primary"){Save}
+        <a class="btn" href="#">Cancel</a>
+    }
+}
