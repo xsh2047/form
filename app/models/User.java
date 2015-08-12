@@ -50,6 +50,7 @@ public class User {
         for(User member: users){
             Logger.debug("Loop is Working too");
             Logger.debug(member.getUsername() + " - " + stranger.getUname());
+            Logger.debug(member.getEmail() + " - " + stranger.getUname());
             if(member.getUsername().equals(stranger.getUname()) || member.getEmail().equals(stranger.getUname())){
                 Logger.debug("UserName/Email Verified");
                 if (member.pword.equals(stranger.getPword())){

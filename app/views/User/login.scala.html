@@ -2,10 +2,10 @@
 @import b3.vertical.fieldConstructor
 @main("Login"){
     <h1>Login</h1>
-    @b3.form(routes.LoginController.userLogin()) {
+    @b3.form(routes.UsersCtrl.enter()) {
         <fieldset>
             @b3.text(loginForm("uname"), '_label -> "Username/Email", 'placeholder -> "johndoe/johndoe@hotmail.com")
-            @b3.password( loginForm("pword"), '_label -> "Password", 'placeholder -> "Password" )
+            @b3.password(loginForm("pword"), '_label -> "Password", 'placeholder -> "Password")
         </fieldset>
         @b3.submit('class -> "btn btn-primary"){Login}
         <a class="btn" href="#">Cancel</a>
